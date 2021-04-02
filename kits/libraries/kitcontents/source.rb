@@ -36,13 +36,17 @@ module KitContents
 
   # Pool and Clean Up library
   ITB = 'Illumina Tune Beads'
-  RSB_HT = 'Resuspension Buffer HT'
+  RSB_HT = 'Resuspension Buffer HT'C
 
   # dsDNA HS Assay Kit
-  COMP_A = 'HS Reagent, Component A'
-  COMP_B = 'HS Buffer, Component B'
-  COMP_C = 'HS Standard 1, Component C'
-  COMP_D = 'HS Standard 2,Component D'
+  COMP_A = 'Qubit dsDNA HS Buffer'
+  COMP_B = 'Qubit dsDNA HS Standard 1'
+  COMP_C = 'Qubit dsDNA HS Standard 2'
+  COMP_D = 'Qubit dsDNA HS Reagent Dye'
+  SAMPLE_BUFFER = 'Agilent HS D100 Sample Buffer'
+
+  #Agilent HS D100 Sample Kit
+  AGE_BUFFER = 'Agilent HS D100 Sample Buffer'
 
   ##### Commonly used components ######
   ETOH = 'Absolute ethanol'
@@ -62,9 +66,10 @@ module KitContents
       description: 'Kit for Anneal RNA',
       location: ['M20 Freezer'],
       components: [
-        { 
+        {
           input_name: EPH3_HT,
-          qty: 8.5, units: MICROLITERS,
+          qty: 2.127, units: MICROLITERS,
+          notes: 'Thaw at room temperature. Invert to mix. <b>Keep on ice until use</b>.'
         }
       ],
       consumables: []
@@ -75,11 +80,15 @@ module KitContents
       location: ['M20 Freezer'],
       components: [
         { input_name: FSM_HT,
-          qty: 9, units: MICROLITERS,
-          sample_name: 'na' },
+          qty: 2.2505, units: MICROLITERS,
+          description: 'COVIDSeq Kit',
+          sample_name: 'na',
+          notes: 'Thaw at room temperature. Invert to mix. <b>Keep on ice until use</b>.' },
         { input_name: RVT_HT,
-          qty: 1, units: MICROLITERS,
-          sample_name: 'na'}
+          description: 'COVIDSeq Kit',
+          qty: 0.25, units: MICROLITERS,
+          sample_name: 'na',
+          notes: 'Thaw at room temperature. <b>Keep on ice until use</b>.' }
       ],
       consumables: [
         {
@@ -94,14 +103,17 @@ module KitContents
       location: ['M20 Freezer'],
       components: [
         { input_name: IPM_HT,
-          qty: 12.5, units: MICROLITERS,
-          sample_name: nil },
+          qty: 7.501, units: MICROLITERS,
+          sample_name: nil,
+          notes: 'Thaw at room temperature. Invert to mix. <b>Keep on ice until use</b>.' },
         { input_name: CPP1_HT,
-          qty: 3.58, units: MICROLITERS,
-          sample_name: nil },
+          qty: 1.075, units: MICROLITERS,
+          sample_name: nil,
+          notes: 'Thaw at room temperature. <b>Keep on ice until use</b>.' },
         { input_name: CPP2_HT,
-          qty: 3.58, units: MICROLITERS,
-          sample_name: nil }
+          qty: 1.075, units: MICROLITERS,
+          sample_name: nil,
+          notes: 'Thaw at room temperature. <b>Keep on ice until use</b>.' }
       ],
       consumables: []
     },
@@ -111,9 +123,11 @@ module KitContents
       location: ['M20 Freezer'],
       components: [
         { input_name: EBLTS_HT,
-          qty: 4, units: MICROLITERS },
+          qty: 1, units: MICROLITERS,
+          notes:  'Bring to room temperature and vortex thoroughly before use.' },
         { input_name: TB1_HT,
-          qty: 12, units: MICROLITERS }
+          qty: 3, units: MICROLITERS,
+          notes: 'Bring to room temperature and vortex thoroughly before use.' }
       ],
       consumables: [
         {
@@ -132,9 +146,11 @@ module KitContents
       location: ['M20 Freezer'],
       components: [ 
         { input_name: ST2_HT, 
-          qty: 10, units: MICROLITERS },
+          qty: 2.5, units: MICROLITERS,
+          notes: 'Vortex thoroughly before use.' },
         { input_name: TWB_HT,
-          qty: 100, units: MICROLITERS }
+          qty: 30.005, units: MICROLITERS,
+          notes: 'Vortex thoroughly before use.' }
       ],
       consumables: []
     },
@@ -145,7 +161,8 @@ module KitContents
       components: [
         {
           input_name: EPM_HT,
-          qty: 24, units: MICROLITERS
+          qty: 6, units: MICROLITERS,
+          notes: 'Invert to mix. <b>Keep on ice until use.</b>'
         }
       ],
       consumables: []
@@ -157,25 +174,32 @@ module KitContents
       components: [
         {
           input_name: ITB,
-          qty: 55, units: MICROLITERS,
+          qty: 504, units: MICROLITERS, #1.305
           sample_name: nil,
-          notes: 'Thaw and Keep on Ice'
+          notes: 'Thaw at room temperature, Vortex thoroughly before use. <b>Keep on ice until use</b>.'
         },
         {
           input_name: RSB_HT,
-          qty: 10, units: MICROLITERS,
+          qty: 55, units: MICROLITERS, # 0.142
           sample_name: nil,
-          notes: 'Thaw and Keep on Ice'
+          notes: 'Take off ice <b>30 minutes before use</b> to bring to room temperature. Vortex and invert to mix.'
         },
         {
           input_name: ETOH,
-          qty: 1000, units: MICROLITERS,
+          qty: 1600, units: MICROLITERS, #4.145
           sample_name: nil,
-          notes: 'na'
+          notes: 'Make 2mL fresh 80% EtOH. Vortex and centrifuge before use.'
         }
       ],
       consumables: []
     },
+
+      # dsDNA HS Assay Kit
+      # COMP_A = 'Qubit dsDNA HS Buffer'
+      # COMP_B = 'Qubit dsDNA HS Standard 1'
+      # COMP_C = 'Qubit dsDNA HS Standard 2'
+      # COMP_D = 'Qubit dsDNA HS Reagent Dye'
+      # SAMPLE_BUFFER = 'Agilent HS D100 Sample Buffer'
 
     'dsDNA HS Assay Kit' => {
       description: 'Qubit dsNDA HS Assay kit',
@@ -183,13 +207,13 @@ module KitContents
       components: [
         {
           input_name: COMP_A,
-          qty: 1, units: MICROLITERS,
+          qty: 1990, units: MICROLITERS,
           sample_name: nil,
-          notes: 'Bring to room temp'
+          notes: nil
         },
         {
           input_name: COMP_B,
-          qty: 199, units: MICROLITERS,
+          qty: 10, units: MICROLITERS,
           sample_name: nil,
           notes: 'Bring to room temp'
         },
@@ -203,13 +227,51 @@ module KitContents
           input_name: COMP_D,
           qty: 10, units: MICROLITERS,
           sample_name: nil,
-          notes: 'Bring to room temp'
+          notes: 'Do not leave out in the light'
+        },
+        {
+          input_name: SAMPLE_BUFFER,
+          qty: 2, units: MICROLITERS,
+          sample_name: nil,
+          notes: 'Use at room temp'
         }
       ],
       consumables: [
         {
           consumable: CONSUMABLES[QBIT_TUBE],
-          qty: 3, units: 'Each'
+          qty: 6, units: 'Each'
+        },
+        {
+          consumable: CONSUMABLES[AGILENT_SCREEN_TAPE],
+          qty: 1, units: 'Each',
+          notes: 'Use at Room temperature'
+        }
+      ]
+    },
+
+    'Agilent HS D100 Kit' => {
+      description: 'Agilent HS D100 Kit',
+      location: ['M20 Freezer'],
+      components: [
+        {
+          input_name: AGE_BUFFER,
+          qty: 2, units: MICROLITERS,
+          sample_name: nil,
+          notes: 'Bring to room temp'
+        }
+      ],
+      consumables: [
+        {
+          consumable: CONSUMABLES[STRIP_TUBE8],
+          qty: 1, units: 'Each',
+        },
+        {
+          consumable: CONSUMABLES[MICRO_TUBE],
+          qty: 1, units: 'Each',
+        },
+        {
+          consumable: CONSUMABLES[TUBE_5ML],
+          qty: 1, units: 'Each',
         }
       ]
     },

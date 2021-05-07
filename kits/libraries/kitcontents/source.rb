@@ -36,7 +36,7 @@ module KitContents
 
   # Pool and Clean Up library
   ITB = 'Illumina Tune Beads'
-  RSB_HT = 'Resuspension Buffer HT'C
+  RSB_HT = 'Resuspension Buffer HT'
 
   # dsDNA HS Assay Kit
   COMP_A = 'Qubit dsDNA HS Buffer'
@@ -174,9 +174,9 @@ module KitContents
       components: [
         {
           input_name: ITB,
-          qty: 504, units: MICROLITERS, #1.305
+          qty: 1.53, units: MICROLITERS,
           sample_name: nil,
-          notes: 'Thaw at room temperature, Vortex thoroughly before use. <b>Keep on ice until use</b>.'
+          notes: 'Vortex thoroughly before use.'
         },
         {
           input_name: RSB_HT,
@@ -239,7 +239,7 @@ module KitContents
       consumables: [
         {
           consumable: CONSUMABLES[QBIT_TUBE],
-          qty: 6, units: 'Each'
+          qty: 5, units: 'Each'
         },
         {
           consumable: CONSUMABLES[AGILENT_SCREEN_TAPE],
